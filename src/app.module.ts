@@ -10,7 +10,7 @@ import { CommentsModule } from './comments/comments.module';
 @Module({
   imports: [ ConfigModule.forRoot({
     envFilePath: [
-      `.env.${process.env.NODE_ENV || 'development'}`, 
+      `.env.${process.env.NODE_ENV || 'dev'}`, 
     ],
     isGlobal:true,
 
