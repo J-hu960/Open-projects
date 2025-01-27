@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs: 
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Install dependencies
+            run: npm i
+          - name: test
+            run: npm run test
+          # - name: compile
+          #   run: npm run build
+        #   - name: build docker image
+        #     run: docker build -t ${{ secrets.DOCKER_USERNAME }}/nodejs-app .
+        #  - name: push
+        #     run: docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-app
+
+        
